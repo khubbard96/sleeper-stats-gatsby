@@ -36,5 +36,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+        // The name of the plugin
+        resolve: 'gatsby-source-mongodb',
+        options: {
+            // Name of the database and collection where are books reside
+            dbName: 'sleeper',
+            collection: [`weeks`, `league_info`],
+            server: {
+                address: '127.0.0.1',
+                port: 27027
+            },
+        }
+    },
   ],
 }
